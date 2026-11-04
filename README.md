@@ -40,7 +40,7 @@ Lakshita/
 | Hero | Name, role, intro, CTA buttons, social links, profile photo |
 | About | Bio, quick facts sidebar |
 | Experience | Timeline of 5 roles |
-| Education | BBM at JNU + schooling |
+| Education | BBA at JNU + schooling |
 | Projects | Designathon, Tutedude UI/UX, IJIRT research paper |
 | Certificates | 4 credential/case-study cards with PDF links |
 | Skills | Animated progress bars + soft-skill pills |
