@@ -71,9 +71,9 @@ nav ul a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;h
 .btn.line{color:var(--p);background:transparent}
 .btn.line:hover{background:var(--p-soft);box-shadow:0 0 20px rgba(132,204,22,.2)}
 .social{display:flex;gap:12px}
-.social a{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--p);transition:.3s;background:transparent}
+.social a{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--p);transition:.3s;background:transparent;position:relative;z-index:5;cursor:pointer}
 .social a:hover{background:var(--p);color:var(--bg);border-color:var(--p);transform:translateY(-3px);box-shadow:0 8px 20px rgba(132,204,22,.3)}
-.social svg{width:20px;height:20px;fill:currentColor}
+.social svg{width:20px;height:20px;fill:currentColor;pointer-events:none}
 
 /* profile photo */
 .pic-wrap{position:relative;width:280px;height:280px;flex-shrink:0;animation:float 6s ease-in-out infinite;z-index:3}
