@@ -29,7 +29,7 @@ img{max-width:100%;display:block}
 section{padding:96px 0;position:relative;z-index:1}
 section.alt{background:var(--tint)}
 h2{font-family:var(--head);font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.15;margin-bottom:12px;letter-spacing:-.01em;display:inline-block;position:relative}
-h2::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:3px;background:linear-gradient(90deg,var(--p),var(--p-dark));border-radius:99px;transition:width .8s cubic-bezier(.2,.7,.2,1)}
+h2::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:3px;background:linear-gradient(90deg,var(--p),var(--p-dark));border-radius:99px;transition:width .8s cubic-bezier(.2,.7,.2,1);pointer-events:none}
 .rv.on h2::after{width:60px}
 .lead{color:var(--muted);max-width:58ch;margin-bottom:44px}
 
@@ -50,8 +50,8 @@ nav ul a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;h
 
 /* ═══ HERO ═══ */
 .hero{padding:110px 0 90px;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;right:-140px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#bef264,#84cc16 70%);opacity:.08;filter:blur(60px)}
-.hero::after{content:"";position:absolute;left:-160px;bottom:-220px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,#84cc16,transparent 65%);opacity:.06;filter:blur(40px);animation:drift 12s ease-in-out infinite alternate}
+.hero::before{content:"";position:absolute;right:-140px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#bef264,#84cc16 70%);opacity:.08;filter:blur(60px);pointer-events:none}
+.hero::after{content:"";position:absolute;left:-160px;bottom:-220px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,#84cc16,transparent 65%);opacity:.06;filter:blur(40px);animation:drift 12s ease-in-out infinite alternate;pointer-events:none}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
 .hero-text{min-width:0}
 .hero small{display:block;color:var(--p);font-weight:600;margin-bottom:18px}
@@ -62,12 +62,12 @@ nav ul a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;h
 .avail{display:inline-flex;align-items:center;gap:10px;padding:8px 10px 8px 14px;border-radius:999px;background:rgba(132,204,22,.08);backdrop-filter:blur(12px);border:1px solid rgba(132,204,22,.3);box-shadow:0 10px 30px -10px rgba(132,204,22,.35);font-weight:600;color:var(--p-dark);margin-bottom:20px;position:relative;overflow:hidden;font-size:.95rem}
 .avail i{width:10px;height:10px;border-radius:50%;background:#22c55e;animation:ping 1.8s infinite}
 .avail em{font-style:normal;font-size:.76rem;background:var(--p);color:var(--bg);padding:3px 10px;border-radius:999px;font-weight:700}
-.avail::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(132,204,22,.15) 50%,transparent 70%);transform:translateX(-100%);animation:sweep 3.2s infinite}
+.avail::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(132,204,22,.15) 50%,transparent 70%);transform:translateX(-100%);animation:sweep 3.2s infinite;pointer-events:none}
 .cta{display:flex;flex-wrap:wrap;gap:14px;margin:32px 0 28px}
 .btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:600;border:2px solid var(--p);transition:.25s;cursor:pointer;font-family:inherit;font-size:1rem;position:relative;overflow:hidden}
 .btn.fill{background:var(--p);color:var(--bg)}
 .btn.fill:hover{background:var(--p-dark);border-color:var(--p-dark);box-shadow:0 0 30px rgba(132,204,22,.4)}
-.btn.fill::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transform:translateX(-100%);animation:btnShine 3s ease-in-out infinite}
+.btn.fill::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transform:translateX(-100%);animation:btnShine 3s ease-in-out infinite;pointer-events:none}
 .btn.line{color:var(--p);background:transparent}
 .btn.line:hover{background:var(--p-soft);box-shadow:0 0 20px rgba(132,204,22,.2)}
 .social{display:flex;gap:12px}
@@ -77,8 +77,8 @@ nav ul a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;h
 
 /* profile photo */
 .pic-wrap{position:relative;width:280px;height:280px;flex-shrink:0;animation:float 6s ease-in-out infinite;z-index:3}
-.pic-wrap::before{content:"";position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(from 0deg,#84cc16,#a3e635,#65a30d,#84cc16);animation:spin 4s linear infinite;z-index:0}
-.pic-wrap::after{content:"";position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 180deg,transparent,var(--p),transparent);animation:spin 6s linear infinite reverse;opacity:.25;filter:blur(10px);z-index:-1}
+.pic-wrap::before{content:"";position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(from 0deg,#84cc16,#a3e635,#65a30d,#84cc16);animation:spin 4s linear infinite;z-index:0;pointer-events:none}
+.pic-wrap::after{content:"";position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 180deg,transparent,var(--p),transparent);animation:spin 6s linear infinite reverse;opacity:.25;filter:blur(10px);z-index:-1;pointer-events:none}
 .profile-pic{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center top;position:relative;z-index:1;border:4px solid var(--bg)}
 
 /* floating chips - now inline */
@@ -207,7 +207,7 @@ nav ul a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;h
 .tl{position:relative;padding-left:30px;border-left:2px solid var(--line);display:grid;gap:34px}
 .job{position:relative}
 .job::before{content:"";position:absolute;left:-39px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--p)}
-.job::after{content:"";position:absolute;left:-43px;top:4px;width:22px;height:22px;border-radius:50%;background:var(--p);opacity:0}
+.job::after{content:"";position:absolute;left:-43px;top:4px;width:22px;height:22px;border-radius:50%;background:var(--p);opacity:0;pointer-events:none}
 .rv.on .job::after{animation:dotPulse 2s ease-out}
 .job h3{font-family:var(--head);font-size:1.25rem}
 .job .co{color:var(--p);font-weight:600}
@@ -234,7 +234,7 @@ nav ul a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;h
 /* ═══ ACHIEVEMENTS ═══ */
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;margin-bottom:34px}
 .stat{background:linear-gradient(135deg,#3f6212,var(--p));color:var(--bg);border-radius:14px;padding:24px;text-align:center;position:relative;overflow:hidden}
-.stat::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,transparent,rgba(255,255,255,.06),transparent);animation:spin 8s linear infinite}
+.stat::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,transparent,rgba(255,255,255,.06),transparent);animation:spin 8s linear infinite;pointer-events:none}
 .stat b{display:block;font-family:var(--head);font-size:2.4rem;line-height:1.1;position:relative}
 .stat span{font-size:.92rem;opacity:.85;position:relative}
 
@@ -246,7 +246,7 @@ form{background:var(--tint);border:1px solid var(--line);border-radius:16px;padd
 .f textarea{min-height:130px}
 .f label{position:absolute;left:0;top:20px;color:var(--muted);pointer-events:none;transition:.2s}
 .f input:focus+label,.f input:not(:placeholder-shown)+label,.f textarea:focus+label,.f textarea:not(:placeholder-shown)+label{top:0;font-size:.78rem;color:var(--p);font-weight:600}
-.f::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--p);transition:width .35s}
+.f::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--p);transition:width .35s;pointer-events:none}
 .f:focus-within::after{width:100%}
 .f input:focus,.f textarea:focus{outline:none}
 .info{background:#050505;color:var(--ink);border-radius:16px;padding:32px;display:grid;gap:8px;align-content:start;border:1px solid var(--line)}
